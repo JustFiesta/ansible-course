@@ -1,6 +1,7 @@
 # Set up loadbalancer configuration
 ---
   - hosts: loadbalancers
+    become: true
     tasks:
       - name: Creating tamplate
         template:
