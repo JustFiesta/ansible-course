@@ -6,7 +6,7 @@
       - name: Creating tamplate
         template:
           src: ../config/lb-config.j2
-          dest: /etc/httpd/conf.d/lb.config
+          dest: /etc/httpd/conf.d/lb.conf
           owner: bin
           group: wheel
           mode: 064
