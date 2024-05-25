@@ -1,0 +1,11 @@
+# Create two apache+php servers with initial configuration and configure load balancer
+---
+  - hosts: webservers
+    become: true
+    tasks:
+      - name: Installing Apache and PHP
+        ansible.builtin.package:
+          name: 
+            - httpd
+            - php
+          state: latest
