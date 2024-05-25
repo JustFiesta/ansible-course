@@ -16,4 +16,4 @@
     - name: Restart apache
       service:
         name: httpd
-        status: restarted
+        state: restarted
