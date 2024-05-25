@@ -2,4 +2,8 @@
 ---
   - hosts: webservers
     tasks:
+    - name: Copying web.php file to webservers
       copy:
+        src: ../index.php
+        dest: /var/www/html
+        mode: 0755
