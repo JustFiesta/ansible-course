@@ -14,11 +14,6 @@
           name: httpd
           state: started
           enabled: yes
-      - name: Enabling PHP service on webservers
-        ansible.builtin.systemd_service:
-          name: php
-          state: started
-          enabled: yes
           
   - hosts: loadbalancers
     become: true
