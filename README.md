@@ -35,6 +35,6 @@ eg. `ansible -m ping all`
 
 Recepie for certain host groups, ordered from first to last.
 
-They are composed from plays (map of host-tasks).
+They are composed from plays (map of host-tasks). In plays modules are used (eg. copy, service, etc.)
 
 eg. `ansible-playbook playbooks/ping.yml`
