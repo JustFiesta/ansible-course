@@ -1,14 +1,15 @@
 ProxyRequests off
 <Proxy balancer://webcluster >
-    {% for hosts in groups['webservers'] %}
-        BalancerMember http:{{ hostvars[hosts]['ansible_host'] }}
-    {% endfor %}
-    ProxySet lbemthod=byrequests
+  {% for hosts in groups['webservers'] %}
+    BalancerMember http://{{hostvars[hosts]['ansible_host']}}
+  {% endfor %}
+    ProxySet lbmethod=byrequests
 </Proxy>
 
+# Optional
 <Location /balancer-manager>
-    SetHandler balance-manager
+  SetHandler balancer-manager
 </Location>
 
-ProxyPass /balance-manager !
-ProxyPass / balanceer://webcluster/
+ProxyPass /balancer-manager !
+ProxyPass / balancer://webcluster/
