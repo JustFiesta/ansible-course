@@ -4,13 +4,13 @@
     become: true
     tasks:
       - name: Installing Apache and PHP on webservers
-        ansible.builtin.package:
+        package:
           name: 
             - httpd
             - php
           state: latest
       - name: Enabling Apache service on webservers
-        ansible.builtin.systemd_service:
+        service:
           name: httpd
           state: started
           enabled: yes
@@ -19,12 +19,12 @@
     become: true
     tasks:
       - name: Installing Apache on loadbalancers
-        ansible.builtin.package:
+        package:
           name: 
             - httpd
           state: latest
       - name: Enabling Apache service on loadbalancers
-        ansible.builtin.systemd_service:
+        service:
           name: httpd
           state: started
           enabled: yes
