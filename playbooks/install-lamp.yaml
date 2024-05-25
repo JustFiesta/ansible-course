@@ -3,9 +3,17 @@
   - hosts: webservers
     become: true
     tasks:
-      - name: Installing Apache and PHP
+      - name: Installing Apache and PHP on webservers
         ansible.builtin.package:
           name: 
             - httpd
             - php
+          state: latest
+  - hosts: loadbalancers
+    become: true
+    tasks:
+      - name: Installing Apache on loadbalancers
+        ansible.builtin.package:
+          name: 
+            - httpd
           state: latest
