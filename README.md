@@ -16,4 +16,19 @@ NOTE: This also supports regular expressions and other types of calls, eg. `ansi
 
 [More here](https://docs.ansible.com/ansible/latest/inventory_guide/intro_patterns.html)
 
+<hr>
 
+## Ansible tasks
+
+* Basic building blocks of ansible execution.
+* Oneliers for checking host status.
+* They retrive return status of executed commands
+* Tasks can be defined in playbooks
+
+eg. `ansible -m ping all`
+
+^ use module ping for inventory
+
+<hr>
+
+## Ansible tasks
