@@ -1,0 +1,6 @@
+# Update all packages in servers
+---
+  - hosts: webservers:loadbalancers
+    tasks:
+    - name: Updating yum packages
+      yum: name=* state=latest
