@@ -1,6 +1,7 @@
 # Copy php aplication files into webservers
 ---
   - hosts: webservers
+    become: true
     tasks:
     - name: Copying web.php file to webservers
       copy:
