@@ -9,6 +9,17 @@
             - httpd
             - php
           state: latest
+      - name: Enabling Apache service on webservers
+        ansible.builtin.systemd_service:
+          name: httpd
+          state: started
+          enabled: yes
+      - name: Enabling PHP service on webservers
+        ansible.builtin.systemd_service:
+          name: php
+          state: started
+          enabled: yes
+          
   - hosts: loadbalancers
     become: true
     tasks:
@@ -17,3 +28,8 @@
           name: 
             - httpd
           state: latest
+      - name: Enabling Apache service on loadbalancers
+        ansible.builtin.systemd_service:
+          name: httpd
+          state: started
+          enabled: yes
