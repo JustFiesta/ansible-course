@@ -1,6 +1,6 @@
 # Ansible course
 
-This repository contains excercises with Ansible.
+This repository contains excercises with Ansible - Configuration Automation Tool.
 
 <hr>
 
@@ -31,4 +31,10 @@ eg. `ansible -m ping all`
 
 <hr>
 
-## Ansible tasks
+## Playbooks
+
+Recepie for certain host groups, ordered from first to last.
+
+They are composed from plays (map of host-tasks).
+
+eg. `ansible-playbook playbooks/ping.yml`
