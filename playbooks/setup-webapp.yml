@@ -1,0 +1,5 @@
+# Copy php aplication files into webservers
+---
+  - hosts: webservers
+    tasks:
+      copy:
