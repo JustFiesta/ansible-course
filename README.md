@@ -41,4 +41,4 @@ eg. `ansible-playbook playbooks/ping.yml`
 
 ## Serice handlers
 
-Listeners for service config change.
+Listeners for service config change. If change is made - service action is performed. Othervise service action is skipped
