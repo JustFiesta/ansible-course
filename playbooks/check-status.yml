@@ -1,0 +1,6 @@
+# Check apache status
+  - hosts: webservers:loadbalancers
+    become: true
+    tasks:
+      - name: Checking Apache status
+        command: service httpd status
