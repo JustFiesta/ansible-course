@@ -38,3 +38,7 @@ Recepie for certain host groups, ordered from first to last.
 They are composed from plays (map of host-tasks). In plays modules are used (eg. copy, service, etc.)
 
 eg. `ansible-playbook playbooks/ping.yml`
+
+## Serice handlers
+
+Listeners for service config change.
