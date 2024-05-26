@@ -4,3 +4,4 @@
   - import_playbook: install-lamp.yml
   - import_playbook: setup-webapp.yml
   - import_playbook: setup-lb.yml
+  - import_playbook: check-status.yml
