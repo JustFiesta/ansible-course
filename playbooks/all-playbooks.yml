@@ -1,0 +1,6 @@
+# Perform all playbooks for 2 webservers + 1 loadbalancer system
+---
+  - import_playbook: update.yml
+  - import_playbook: install-lamp.yml
+  - import_playbook: setup-webapp.yml
+  - import_playbook: setup-lb.yml

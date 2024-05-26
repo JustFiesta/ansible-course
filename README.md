@@ -42,3 +42,7 @@ eg. `ansible-playbook playbooks/ping.yml`
 ## Serice handlers
 
 Listeners for service config change. If change is made - service action is performed. Othervise service action is skipped
+
+## Compose multiple playbooks
+
+Compose playbooks for one system in single playboook file. This happens via importing subsequent playbooks
