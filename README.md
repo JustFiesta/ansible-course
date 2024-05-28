@@ -39,11 +39,15 @@ They are composed from plays (map of host-tasks). In plays modules are used (eg.
 
 eg. `ansible-playbook playbooks/ping.yml`
 
+[Ansible playbooks](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_intro.html)
+
 <hr>
 
 ## Serice handlers
 
 Listeners for service config change. If change is made - service action is performed. Othervise service action is skipped
+
+[Handlers](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_handlers.html)
 
 <hr>
 
@@ -80,3 +84,6 @@ Used to group tasks together. Clean directory structure. Break configuration int
 Initalize directory structure `ansible-galaxy role init roles/webservers`
 
 It's a great way to write configuration in modular way.
+
+[Roles](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html)
+[Ansible Galaxy - repository with jump starts for projects](https://galaxy.ansible.com/ui/)
