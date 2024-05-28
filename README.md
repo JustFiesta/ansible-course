@@ -98,4 +98,6 @@ eg. `ansible playbook playbooks/setup-webapp --check`
 
 ## Error handling in playbooks
 
-Some modules might return non zero exit code and its okay (eg. /basg/false), or they might return change status when change was NOT made (eg. `command: service httpd status`)
+Some modules might return non zero exit code and its okay (eg. `command: /basg/false`), or they might return change status when change was NOT made (eg. `command: service httpd status`)
+
+In this scenarios one can use `ignore_errors: yes` and `changed_when: false`
