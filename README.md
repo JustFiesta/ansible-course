@@ -118,4 +118,20 @@ Specify tags one want to run.
 
 eg. `ansible-playbook playbooks/setup-webapp.yml --tags upload`
 
+or skip specyfic tasks:
+
+eg. `ansible-playbook playbooks/setup-webapp.yml --skip-tags upload`
+
 [Tags](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_tags.html)
+
+<hr>
+
+## Ansible Vault - keep sensitive data safe
+
+Encrypts stored vault files. Vault can be shared via SCM. Vault can encrypt any data structure used by Ansible. Password protected. Default cipher is AES.
+
+* create vault: `ansible-vault create vars/secret-variables.yml`
+* edit vault file: `ansible-vault edit vars/secret-variables.yml`
+* prompt for password: `ansible-playbook setup-app.yml --ask-vault-pass`
+
+[Ansible Vault](https://docs.ansible.com/ansible/latest/vault_guide/index.html)

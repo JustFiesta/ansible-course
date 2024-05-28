@@ -1,5 +1,12 @@
 ---
 # tasks file for roles/webservers
+
+# Debug password from secret file
+- name: Use secret password here
+  debug:
+    msg: "{{ secret_password }}"
+
+
 # Copy php aplication files into webservers
 - name: Copying web.php file to webservers
   copy:

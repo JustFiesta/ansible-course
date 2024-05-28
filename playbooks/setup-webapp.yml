@@ -4,3 +4,6 @@
     become: true
     roles:
       - webservers
+    
+    vars_files:
+      - ../vars/secret-variables.yml
