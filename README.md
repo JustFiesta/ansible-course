@@ -6,6 +6,8 @@ This repository contains excercises with Ansible - Configuration Automation Tool
 
 To change the default inventory to hosts-dev and not use -i option all time: create ansible.cfg
 
+Setup for AWS: upload setup-env.yml with changed to recent AMI ids, and your regions to CloudFormation
+
 [More here](https://docs.ansible.com/ansible/latest/reference_appendices/config.html#ansible-configuration-settings)
 
 <hr>
