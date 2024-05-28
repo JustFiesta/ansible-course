@@ -135,3 +135,29 @@ Encrypts stored vault files. Vault can be shared via SCM. Vault can encrypt any 
 * prompt for password: `ansible-playbook setup-app.yml --ask-vault-pass`
 
 [Ansible Vault](https://docs.ansible.com/ansible/latest/vault_guide/index.html)
+
+<hr>
+
+## Prompts
+
+Can be stored as ariables, run conditions based on them, ask for sensitive data.
+
+To ask user a prompt, in a playbook file specify: 
+```bash
+vars_prompt: 
+    - name: "upload_var"
+      prompt: "Upload index.php file?"
+
+tasks:
+    - name: Upload application file
+      copy:
+        src: ../index.php
+        dest: "{{ path_to_app }}"
+      when: upload_vars == 'yes'
+      tags: upload
+```
+
+Above yml has a conditional based on user input in upload task (`when: ...`). When input is 'yes' it will proceed with task, otherwise it is omited.
+
+[Prompts](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_prompts.html)
+[When Statement](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_conditionals.html#the-when-statement)
