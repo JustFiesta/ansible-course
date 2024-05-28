@@ -5,5 +5,8 @@
     roles:
       - webservers
     
-    vars_files:
-      - ../vars/secret-variables.yml
+    vars_prompt:
+      - name: "upload_var"
+        prompt: "Upload the index.php file?"
+      - name: "create_var"
+        prompt: "Create info.php page?"
