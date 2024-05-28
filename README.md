@@ -70,3 +70,13 @@ Debug module displays variables contents and playbook information.
 * [Using Variables](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_variables.html)
 * [Register Variables](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_variables.html#registering-variables)
 * [Debug mode](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/debug_module.html)
+
+<hr>
+
+## Roles
+
+Used to group tasks together. Clean directory structure. Break configuration into files. Reuse code in similar configurations. Easy to modify and reduce syntax errors.
+
+Initalize directory structure `ansible-galaxy role init roles/webservers`
+
+It's a great way to write configuration in modular way.
