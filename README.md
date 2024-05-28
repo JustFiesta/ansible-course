@@ -39,10 +39,34 @@ They are composed from plays (map of host-tasks). In plays modules are used (eg.
 
 eg. `ansible-playbook playbooks/ping.yml`
 
+<hr>
+
 ## Serice handlers
 
 Listeners for service config change. If change is made - service action is performed. Othervise service action is skipped
 
+<hr>
+
 ## Compose multiple playbooks
 
 Compose playbooks for one system in single playboook file. This happens via importing subsequent playbooks
+
+<hr>
+
+## Variables
+
+Ansible provides ANSIBLE_FACTS variable with all metadata about host.  
+
+Status module provides view into gathered information, eg. `ansible -m setup app1`  
+
+Jinja2 templating is used to evaluate variables.
+
+Local variables are created with `vars:`as key-value pairs. 
+
+Variables can be registered from tasks by `register: *name_of_variable*`. They will contain outputs from it's task
+
+Debug module displays variables contents and playbook information.  
+
+* [Using Variables](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_variables.html)
+* [Register Variables](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_variables.html#registering-variables)
+* [Debug mode](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/debug_module.html)
