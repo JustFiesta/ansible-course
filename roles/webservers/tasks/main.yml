@@ -1,7 +1,6 @@
 ---
 # tasks file for roles/webservers
 # Copy php aplication files into webservers
----
 - name: Copying web.php file to webservers
   copy:
     src: ../files/index.php
