@@ -2,16 +2,20 @@
 ---
   - hosts: webservers
     become: true
+
+    vars:
+      path_to_app: "/var/www/hmtl"
+
     tasks:
     - name: Copying web.php file to webservers
       copy:
         src: ../index.php
-        dest: /var/www/html
+        dest: "{{ path_to_app }}"
         mode: 0755
 
     - name: Create simple info page
       copy:
-        dest: /var/www/html/info.php
+        dest: "{{ path_to_app }}/info.php"
         content: "<h1> Info about webserver {{ ansible_hostname }} </h1>"
 
     - name: Configure php.ini
