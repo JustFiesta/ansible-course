@@ -104,7 +104,7 @@ Some modules might return non zero exit code and its okay (eg. `command: /basg/f
 
 In this scenarios one can use `ignore_errors: yes` and `changed_when: false`
 
-[Error handling](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_error_handling.html)
+[Error handling](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_error_handling.htmls)
 
 <hr>
 
