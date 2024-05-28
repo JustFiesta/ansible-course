@@ -95,3 +95,7 @@ It's a great way to write configuration in modular way.
 Dry-run does not make cnhanges on remote systems, rather than this it return status check if configuration could make any changes.
 
 eg. `ansible playbook playbooks/setup-webapp --check`
+
+## Error handling in playbooks
+
+Some modules might return non zero exit code and its okay (eg. /basg/false), or they might return change status when change was NOT made (eg. `command: service httpd status`)
