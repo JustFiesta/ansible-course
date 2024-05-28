@@ -94,10 +94,28 @@ It's a great way to write configuration in modular way.
 
 Dry-run does not make cnhanges on remote systems, rather than this it return status check if configuration could make any changes.
 
-eg. `ansible playbook playbooks/setup-webapp --check`
+eg. `ansible-playbook playbooks/setup-webapp --check`
+
+<hr>
 
 ## Error handling in playbooks
 
 Some modules might return non zero exit code and its okay (eg. `command: /basg/false`), or they might return change status when change was NOT made (eg. `command: service httpd status`)
 
 In this scenarios one can use `ignore_errors: yes` and `changed_when: false`
+
+[Error handling](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_error_handling.html)
+
+<hr>
+
+## Tags
+
+Add them to specific tasks, so one can use specyfic parts of playbook.
+
+Can be added to any resource.
+
+Specify tags one want to run.
+
+eg. `ansible-playbook playbooks/setup-webapp.yml --tags upload`
+
+[Tags](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_tags.html)
