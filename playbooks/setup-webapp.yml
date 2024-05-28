@@ -18,9 +18,11 @@
         dest: "{{ path_to_app }}/info.php"
         content: "<h1> Info about webserver {{ ansible_hostname }} </h1>"
 
-    - name: See directory contents with debug var
+    - name: See directory contents
       command: ls -la {{ path_to_app }}
       register: dir_contents
+
+    - name: Debug directory contents
       debug:
         msg: "{{ dir_contents }}"
 
