@@ -87,3 +87,11 @@ It's a great way to write configuration in modular way.
 
 [Roles](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html)
 [Ansible Galaxy - repository with jump starts for projects](https://galaxy.ansible.com/ui/)
+
+<hr>
+
+## Dry-run AKA Check mode
+
+Dry-run does not make cnhanges on remote systems, rather than this it return status check if configuration could make any changes.
+
+eg. `ansible playbook playbooks/setup-webapp --check`
