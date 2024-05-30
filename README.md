@@ -20,6 +20,14 @@ NOTE: This also supports regular expressions and other types of calls, eg. `ansi
 
 <hr>
 
+## Ansible installation and configuration
+
+Installation comes on UNIX machines with python via pip/pipx.
+
+Configuration on nodes must provide generally accesible SSH key (`ssh-keygen`) and copied to hosts (`ssh-copy-id`). Additionally ansible user can be created on control and host node, with visudo -> `ansible_user ALL=(ALL) NOPASSWD: ALL` premission.
+
+<hr>
+
 ## Ansible tasks
 
 * Basic building blocks of ansible execution.
