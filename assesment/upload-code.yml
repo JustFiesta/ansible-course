@@ -1,0 +1,8 @@
+---
+- hosts: ansible-hosts
+  become: yes
+  tasks:
+    - name: clone code repository
+      git:
+        repo: https://github.com/JustFiesta/spring-petclinic.git
+        dest: /src/spring-petclinic                               

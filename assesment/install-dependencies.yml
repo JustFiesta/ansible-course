@@ -1,0 +1,19 @@
+---
+- hosts: ansible-hosts
+  become: true
+  tasks:
+    - name: install dependencies (docker, git, java)
+      package:
+        name:
+          - docker
+          - git
+          - java
+        state: latest
+      notify: start docker
+  handlers:
+    - name: run and enable docker
+      service:
+        name: docker
+        state: started
+        enabled: yes
+      listen: start docker

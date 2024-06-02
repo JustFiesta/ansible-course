@@ -1,0 +1,4 @@
+---
+- import_playbook: install-dependencies.yml
+- import_playbook: upload-code.yml
+- import_playbook: run-app.yml

@@ -1,0 +1,16 @@
+---
+- hosts: ansible-hosts
+  become: yes
+  tasks:
+    - name: build spring-petclinic docker image
+      docker_image:
+        build:
+          path: /src/spring-petclinic
+        name: spring-petclinic
+        source: build
+    - name: run spring-petclinic container
+      docker_container:
+        name: spring-petclinic
+        image: spring-petclinic
+        ports:
+          - "80:8080"
